@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cálculos de Média </title>
+</head>
+<body>
+    
+    <script>
+
+        let aluno = window.prompt("Digite o nome do/da Estudante");
+        let n1 = window.prompt("Digite a 1ª Nota");
+        let n2 = window.prompt("Digite a 2ª Nota");
+        let n3 = window.prompt("Digite a 3ª Nota");
+
+        let media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3)) / parseFloat(3);
+
+        alert("A média do/da Estudante "+aluno +" é "+media);
+
+        if(media >= 6){
+            alert("Estudante "+aluno+ " está APROVADO!")
+        } else if(media >=3 && media <6){
+            alert("Estudante "+aluno+ " está na INTERVENÇÃO!")
+        } else if (media <3){
+            alert("Estudante "+aluno+ " está na RECUPERAÇÃO!")
+        }
+
+    </script>
+
+</body>
+</html>

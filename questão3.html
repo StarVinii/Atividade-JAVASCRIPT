@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulário de Médias </title>
+</head>
+
+<style type="text/css">
+    body{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+	.container{
+		width: 100vw;
+		height: 100vh;
+        /* border:1px solid blue;   */
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+    form{
+        border:2px solid rgba(145, 45, 45, 0.692);
+        padding: 10px;
+        background-color: rgba(92, 204, 185, 0.932);
+    }
+    #med{
+        position: relative;
+        left: 7vw;
+        color: rgb(2, 2, 2);
+        background-color: rgb(228, 203, 122);
+    }
+    #result{
+        position: relative;
+        left: 30px;
+        border: 2px solid rgb(6, 65, 73);;
+    }
+    #res{
+        position: relative;
+        left: 20px;
+    }
+    #n1{
+        border: 2px solid rgb(6, 65, 73);;
+    }
+    #n2{
+        border: 2px solid rgb(6, 65, 73);
+    }
+    #n3{
+        border: 2px solid rgb(6, 65, 73);
+        position: relative;
+        left: 6px;
+    }
+</style>
+
+<body>
+    <div class="container">
+    <form>
+        <p> Primeira Nota : <input type="number" id="n1"> </p>
+        <p> Segunda Nota : <input type="number" id="n2"> </p>
+        <p> Terceira nota : <input type="number" id="n3"> </p>
+        <p> <button type="button" onclick="Media()" id="med"> Média </button> </p> 
+        <p> <h10 id="res"> Resultado: </h10> <input type="text" id="result" readonly> </p>
+    </form>
+    </div>
+
+    <script>
+        function Media(){
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let n3 = document.getElementById("n3").value;
+
+            let resultado = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3)) / parseFloat(3);
+               
+            document.getElementById("result").value = resultado;
+        }
+    </script>
+</body>
+</html>
